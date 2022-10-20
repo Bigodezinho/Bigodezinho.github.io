@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCliente.css">
+    <title>Cadastro Empreiteira</title>
+</head>
+
+<div id="divTopo">
+    <a id="Empreiteira" href="index.html"> Empreiteira </a>
+
+    <a id="cliente" href="clienteInicio.html"> Cliente </a>
+    <a id="funcionario" href="FuncionarioInicio.html"> Colaborador </a>
+    <a id="obra" href="obraInicio.html"> Obra </a>
+    <a id="os" href="osInicio.html"> Ordem de Serviço </a>
+
+    <a id="funcionalidades" href="contato.html"> Funcionalidades </a>
+    <a id="saibaMais" href="contato.html"> Saiba mais </a>
+    <a id="contato" href="contato.html"> Contato </a>
+</div>
+
+<body>
+    <div id="alterar-cliente" class="ocultar">
+        
+        <h1 id="subTitulo" >Alterar Cliente</h1>
+        <br>
+        
+        
+        <div id="contCampos">
+            
+            <div class="input-group row justify-content-center">
+                <label for="cliente-id-alterar">ID</label>
+                <input type="text" class="form-control col-4 input-group"  id="cliente-id-alterar" readonly>
+            </div>
+            
+        </div>
+        
+        <br>
+        
+        <div id="contCampos">
+            
+            <label for="cliente-nome-alterar">Nome:</label>
+            <input type="text" id="cliente-nome-alterar" />
+            <label for="cliente-cnpj-alterar">CNPJ:</label>
+            <input type="text" id="cliente-cnpj-alterar" />
+            <label for="cliente-telefone-alterar">Telefone:</label>
+            <input type="text" id="cliente-telefone-alterar" />
+            
+        </div>
+        
+        <div style="display: flex; align-content: center; justify-content: center;">
+           
+                <a id="botao-espaco"><input type="button" value="Alterar Cliente" onclick="handlerAlterarCliente()" /></a>
+                <a style="text-decoration:none" id="botao-espaco" href="clienteInicio.html"><input type="button" value="Voltar"></a>
+                <a id="botao-espaco"><input  type="button" value="Deletar" onclick="handlerDeleteCliente()" /></a>
+            
+        </div>
+    </div>
+    
+    <br>
+    
+    <table id="tabela-clientes" class="mostrar" border="5px">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    CNPJ
+                </th>
+                <th>
+                    Telefone
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tabela-clientes-body">
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+</div>
+
+<script src="jquery.js"></script>    
+<script src="utils.js"></script>
+<script src="request.js"></script>
+<script src="clienteAlterar.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</body>
+
+</html>

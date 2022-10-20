@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleOS.css">
+    <title>Cadastro Empreiteira</title>
+</head>
+
+<div id="divTopo">
+    <a id="Empreiteira" href="index.html"> Empreiteira </a>
+
+    <a id="cliente" href="clienteInicio.html"> Cliente </a>
+    <a id="funcionario" href="FuncionarioInicio.html"> Colaborador </a>
+    <a id="obra" href="obraInicio.html"> Obra </a>
+    <a id="os" href="osInicio.html"> Ordem de Serviço </a>
+
+    <a id="funcionalidades" href="contato.html"> Funcionalidades </a>
+    <a id="saibaMais" href="contato.html"> Saiba mais </a>
+    <a id="contato" href="contato.html"> Contato </a>
+</div>
+
+<body>
+    <div name="formulario-os" id="form-os" class="formularios">
+        
+        <h1 id="subTitulo">Cadastrar OS</h1>
+        
+        <div id="botaoCliente">
+            <a href="osCadastrar.html"><input type="button" value="Cadastrar OS" onclick="handlerSalvarOS()" /></a> <br>
+        </div>
+    </div>
+    <div id="botaoCliente">
+        <input type="text" placeholder="Buscar" oninput="ListarPorCriterio(this)">
+    </div>
+    <br>
+    <table id="tabela-os" class="mostrar" border="5px">
+        <thead>
+            <tr>
+                <th>
+                    ordemDeServico
+                </th>
+                <th>
+                    valordaObra
+                </th>
+                <th>
+                    descricaoDaObra
+                </th>
+                <th>
+                    nomeCliente
+                </th>
+                <th>
+                    nomeFuncionario
+                </th>
+                <th>
+                    dataDeInicio
+                </th>
+                <th>
+                    previsaoDeTermino
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tabela-os-body">
+            
+        </tbody>
+    </table>
+</div>
+
+<script src="jquery.js"></script>
+
+<script src="utils.js"></script>
+<script src="request.js"></script>
+<script src="OS.js"></script>
+</body>
+
+</html>
